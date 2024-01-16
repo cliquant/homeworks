@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
+  <title>MAJASDARBS</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    let canvaS;
+    let burti = ['L', 'O', 'R', 'E', 'T', 'A'];
+    let currentLetterIndex = 0;
+
+    function setup() {
+        canvaS = createCanvas(random(500, 600), random(500, 600));
+        canvaS.background(randomKraasa());
+        textSize(30);
+        textFont('Arial');
+    }
+
+    function draw() {
+        if (mouseIsPressed && currentLetterIndex < burti.length) {
+            fill(0);
+            text(burti[currentLetterIndex], mouseX, mouseY);
+            currentLetterIndex++;
+        } else if (currentLetterIndex >= burti.length) {
+            currentLetterIndex = 0;
+        }
+    }
+
+    function randomKraasa() {
+        return color(random(255), random(255), random(255));
+    }
+  </script>
+</body>
+</html>

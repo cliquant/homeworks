@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
-  <title>MAJASDARBS</title>
+  <title>LORETA MD</title>
   <style>
     body {
       display: flex;
@@ -17,29 +17,24 @@
 </head>
 <body>
   <script>
-    let canvaS;
-    let burti = ['L', 'O', 'R', 'E', 'T', 'A'];
-    let currentLetterIndex = 0;
+    var canva;
+    var burti = ['L', 'O', 'R', 'E', 'T', 'A'];
+    var burtaKartasNR = 0;
 
     function setup() {
-        canvaS = createCanvas(random(500, 600), random(500, 600));
-        canvaS.background(randomKraasa());
+        canva = createCanvas(random(500, 600), random(500, 600));
+        canva.background(color(random(255), random(255), random(255)));
         textSize(30);
         textFont('Arial');
     }
-
-    function draw() {
-        if (mouseIsPressed && currentLetterIndex < burti.length) {
-            fill(0);
-            text(burti[currentLetterIndex], mouseX, mouseY);
-            currentLetterIndex++;
-        } else if (currentLetterIndex >= burti.length) {
-            currentLetterIndex = 0;
-        }
-    }
-
-    function randomKraasa() {
-        return color(random(255), random(255), random(255));
+    function draw() { 
+      if (mouseIsPressed && burtaKartasNR < burti.length) {
+        fill(0);
+        text(burti[burtaKartasNR], mouseX, mouseY);
+        burtaKartasNR++;
+      } else if (burtaKartasNR >= burti.length) {
+          burtaKartasNR = 0;
+      }
     }
   </script>
 </body>

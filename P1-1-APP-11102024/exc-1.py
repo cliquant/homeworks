@@ -13,5 +13,3 @@ try:
     print(f"Kad x = {x}, y = {y:.2f}")
 except ValueError:
     print("Lūdzu, ievadiet derīgu skaitli.")
-except ZeroDivisionError:
-    print(f"Nevar aprēķināt y, kad x = {x} dēļ dalīšanas ar nulli.")

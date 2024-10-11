@@ -6,7 +6,7 @@ try:
     x = float(input("Lūdzu, ievadiet x vērtību: "))
 
     if x > 0:
-        y = math.sqrt(3 * x * 2)**3 - (24 * x) / (3 * math.sqrt(x)) - (2 / math.sqrt(x))
+        y = (math.sqrt(3 * x * 2)*3 - (24 x)) / ((3 * math.sqrt(x)) - (2 / math.sqrt(x)))
     else:
         y = (2 * x) - (3 - x) / 4
 
